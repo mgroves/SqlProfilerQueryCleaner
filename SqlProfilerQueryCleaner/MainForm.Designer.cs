@@ -61,7 +61,7 @@
             this.btnClean.UseVisualStyleBackColor = true;
             this.btnClean.Click += new System.EventHandler(this.btnClean_Click);
             // 
-            // Form1
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -70,7 +70,7 @@
             this.Controls.Add(this.txtOutputSql);
             this.Controls.Add(this.txtInputSql);
             this.Name = "MainForm";
-            this.Text = "Form1";
+            this.Text = "Sql Profiler Query Cleaner";
             this.ResumeLayout(false);
             this.PerformLayout();
 
