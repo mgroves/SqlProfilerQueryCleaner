@@ -1,6 +1,6 @@
 ﻿namespace SqlProfilerQueryCleaner
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -69,7 +69,7 @@
             this.Controls.Add(this.btnClean);
             this.Controls.Add(this.txtOutputSql);
             this.Controls.Add(this.txtInputSql);
-            this.Name = "Form1";
+            this.Name = "MainForm";
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
