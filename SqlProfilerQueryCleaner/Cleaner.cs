@@ -16,6 +16,7 @@ namespace SqlProfilerQueryCleaner
             var splitSql = resultSql.Split(new[] { "',N'" }, StringSplitOptions.None);
             resultSql = splitSql[0];
             var unescapedSql = resultSql.Replace("''", "'");
+            unescapedSql = SqlFormatter.SqlFormatter.Format(unescapedSql);
 
             var rearrangedParameters = GetParameterDeclarationAndValues(splitSql[1]);
 
@@ -35,8 +36,8 @@ namespace SqlProfilerQueryCleaner
             {
                 // trim off the '@' which will only be on the first one
                 var nameAndType = csv[firstHalfIndex].Trim('@');
-                // add an '@' back on
-                nameAndType = "@" + nameAndType;
+                // add an '@' back on and remove the trailing single quote (flipside of '@' trim).
+                nameAndType = "@" + nameAndType.Trim('\'');
                 // add it to the list
                 declarations.Add(nameAndType);
                 firstHalfIndex++;

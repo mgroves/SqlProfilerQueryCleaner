@@ -25,11 +25,17 @@ namespace SqlProfilerQueryCleaner
             try
             {
                 txtOutputSql.Text = Cleaner.Clean(txtInputSql.Text);
+                Clipboard.SetText(txtOutputSql.Text);
             }
             catch
             {
                 txtOutputSql.Text = "It didn't work.";
             }
+        }
+
+        private void MainForm_ResizeEnd(object sender, EventArgs e)
+        {
+            this.btnClean.Left = (this.Width - this.btnClean.Width) / 2;
         }
 
     }

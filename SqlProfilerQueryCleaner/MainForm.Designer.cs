@@ -35,6 +35,8 @@
             // 
             // txtInputSql
             // 
+            this.txtInputSql.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtInputSql.Location = new System.Drawing.Point(12, 12);
             this.txtInputSql.Multiline = true;
             this.txtInputSql.Name = "txtInputSql";
@@ -44,20 +46,24 @@
             // 
             // txtOutputSql
             // 
-            this.txtOutputSql.Location = new System.Drawing.Point(12, 287);
+            this.txtOutputSql.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtOutputSql.Location = new System.Drawing.Point(12, 278);
             this.txtOutputSql.Multiline = true;
             this.txtOutputSql.Name = "txtOutputSql";
             this.txtOutputSql.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtOutputSql.Size = new System.Drawing.Size(628, 231);
-            this.txtOutputSql.TabIndex = 1;
+            this.txtOutputSql.Size = new System.Drawing.Size(628, 255);
+            this.txtOutputSql.TabIndex = 2;
             // 
             // btnClean
             // 
-            this.btnClean.Location = new System.Drawing.Point(268, 250);
+            this.btnClean.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnClean.Location = new System.Drawing.Point(290, 249);
             this.btnClean.Name = "btnClean";
             this.btnClean.Size = new System.Drawing.Size(75, 23);
-            this.btnClean.TabIndex = 2;
-            this.btnClean.Text = "\\/ Clean \\/";
+            this.btnClean.TabIndex = 1;
+            this.btnClean.Text = "\\/ &Clean \\/";
             this.btnClean.UseVisualStyleBackColor = true;
             this.btnClean.Click += new System.EventHandler(this.btnClean_Click);
             // 
@@ -71,6 +77,7 @@
             this.Controls.Add(this.txtInputSql);
             this.Name = "MainForm";
             this.Text = "Sql Profiler Query Cleaner";
+            this.ResizeEnd += new System.EventHandler(this.MainForm_ResizeEnd);
             this.ResumeLayout(false);
             this.PerformLayout();
 
