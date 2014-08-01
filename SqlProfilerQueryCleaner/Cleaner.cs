@@ -35,8 +35,8 @@ namespace SqlProfilerQueryCleaner
             {
                 // trim off the '@' which will only be on the first one
                 var nameAndType = csv[firstHalfIndex].Trim('@');
-                // add an '@' back on
-                nameAndType = "@" + nameAndType;
+                // add an '@' back on and remove the trailing single quote (flipside of '@' trim).
+                nameAndType = "@" + nameAndType.Trim('\'');
                 // add it to the list
                 declarations.Add(nameAndType);
                 firstHalfIndex++;
