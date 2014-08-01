@@ -16,6 +16,7 @@ namespace SqlProfilerQueryCleaner
             var splitSql = resultSql.Split(new[] { "',N'" }, StringSplitOptions.None);
             resultSql = splitSql[0];
             var unescapedSql = resultSql.Replace("''", "'");
+            unescapedSql = SqlFormatter.SqlFormatter.Format(unescapedSql);
 
             var rearrangedParameters = GetParameterDeclarationAndValues(splitSql[1]);
 

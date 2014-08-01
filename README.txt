@@ -18,6 +18,11 @@ DECLARE @MyParam2 datetime='2013-03-15'
 MY SQL STRING with 'quotes' that AREN'T ESCAPED
 
 To do:
-* This thing uses some really raw string parsing. I would prefer a SQL parser.
+
 * Make this into a SQL Studio extension
 * Make a command line/PowerShell version
+
+Acknowledgements:
+
+* Andrew Whitaker's [sql-formatter C# project](https://github.com/AndrewWhitaker/sql-formatter), which is based on
+* Jeremy Dorn's [sql-formatter project for php](https://github.com/jdorn/sql-formatter), both MIT Licensed.
